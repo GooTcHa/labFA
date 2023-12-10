@@ -7,14 +7,17 @@ scope = [2, 3]
 a = 0.5
 
 
+#Находим значение функции y для посроения графика
 def calculate_equalation(x):
     return 2*x + (x/(1 + math.pow(x, 2))) - math.atan(x) - 4
 
 
+#Вычисление приближения
 def method_of_approximation(x):
     return 2 - (x / (2 * (1 + math.pow(x, 2)))) + math.atan(x) / 2
 
 
+#Отображаем график
 def print_graphic():
     range_x = 100
     x = [i for i in range(-range_x, range_x)]
@@ -22,11 +25,6 @@ def print_graphic():
     plt.plot(x, y)
     plt.plot([-range_x, range_x], [0, 0], color='g')
     plt.plot([0, 0], [min(y), max(y)], color='g')
-    # ax = plt.gca()
-    # ax.spines['left'].set_position('zero')
-    # ax.spines['bottom'].set_position('center')
-    # ax.spines['top'].set_visible(False)
-    # ax.spines['right'].set_visible(False)
     plt.show()
 
 
